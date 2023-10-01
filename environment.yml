@@ -1,0 +1,24 @@
+name: foss4g2023oceania
+channels:
+  - conda-forge
+  - nvidia
+  - nodefaults
+dependencies:
+  - conda-lock~=2.3.0
+  - cupy~=12.2.0
+  - gcsfs~=2023.9.2
+  - gsutil~=5.26
+  - jupyterlab~=4.0.6
+  - rapidsai::kvikio~=23.06.00
+  - lightning~=2.0.9.post0
+  - pip~=23.2.1
+  - pynvml~=11.5.0
+  - python~=3.10
+  - torchdata~=0.6.1
+  - xarray~=2023.9.0
+  - xbatcher~=0.3.0
+  - zarr~=2.16.1
+  - zen3geo~=0.6.2
+  - pip:
+      # https://github.com/xarray-contrib/cupy-xarray/pull/10
+      - git+https://github.com/dcherian/cupy-xarray.git@d7394ef7bdc941df7e418918ef2aabb7fea5839e
