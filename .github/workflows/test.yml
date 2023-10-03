@@ -1,0 +1,46 @@
+# This workflow will install Python dependencies and run tests on a single version of Python
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
+
+name: Test
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    types: [opened, ready_for_review, reopened, synchronize]
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: ${{ matrix.os }} - Python ${{ matrix.python-version }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10"]
+        os: [ubuntu-22.04]
+    defaults:
+      run:
+        shell: bash -l {0}
+
+    steps:
+      # Checkout current git repository
+      - name: Checkout
+        uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608 # v4.1.0
+        with:
+          filter: tree:0
+
+      # Install Micromamba with conda-forge dependencies
+      - name: Setup Micromamba
+        uses: mamba-org/setup-micromamba@2b72821d5ad7f6da3c003a3684ce341bf187b46f # v1.4.4
+        with:
+          environment-name: foss4g2023oceania
+          environment-file: conda-lock.yml
+
+      # Run tests to check dependency imports
+      - name: Test imports
+        run: |
+            python -c "import xarray as xr; xr.show_versions()"

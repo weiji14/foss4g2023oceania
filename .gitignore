@@ -1,0 +1,15 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+
+# Data files and folders
+data/**
+!data/**/
+**/*.zarr/
+
+# Checkpoints and logs
+cufile.log
+checkpoints/*.ckpt
+logs/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
