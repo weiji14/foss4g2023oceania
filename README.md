@@ -103,6 +103,12 @@ dependencies to the exact versions in the `conda-lock.yml` file.
 See also https://conda.github.io/conda-lock/output/#unified-lockfile for more
 usage details.
 
+## Running the scripts
+
+To create a subset of the WeatherBench2 Zarr dataset, run:
+
+    python 0_weatherbench2zarr.py
+
 
 # References
 
