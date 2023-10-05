@@ -109,6 +109,9 @@ To create a subset of the WeatherBench2 Zarr dataset, run:
 
     python 0_weatherbench2zarr.py
 
+This will save a one year subset of the WeatherBench2 ERA5 dataset to your
+local disk. It will include data at pressure level 500hPa, with the variables
+'geopotential', 'u_component_of_wind', and 'v_component_of_wind' only.
 
 # References
 

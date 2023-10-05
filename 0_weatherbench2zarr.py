@@ -1,5 +1,5 @@
 """
-Saving a subset of
+Saving a one year subset (with select data variables) of
 [WeatherBench2](https://weatherbench2.readthedocs.io/en/latest/data-guide.html)
 to a local Zarr store.
 
@@ -14,18 +14,18 @@ import xarray as xr
 
 # %%
 # Temporal subset of WeatherBench2 dataset to 2 years
-store_name: str = "2020-2022-6h-240x121_equiangular_with_poles_conservative_zuv500.zarr"
+store_name: str = "2020-full_37-6h-0p25deg-chunk-1_zuv500.zarr"
 if not os.path.exists(path=store_name):
     # Open WeatherBench2 Zarr store from Google Cloud Storage
     ds: xr.Dataset = xr.open_dataset(
-        filename_or_obj="gs://weatherbench2/datasets/era5/1959-2022-6h-240x121_equiangular_with_poles_conservative.zarr",
+        filename_or_obj="gs://weatherbench2/datasets/era5/1959-2022-full_37-6h-0p25deg-chunk-1.zarr-v2",
         engine="zarr",
         chunks="auto",
         consolidated=True,
     )
 
-    # Subset to years 2020-2022, 500hPa pressure level
-    ds_500hpa = ds.sel(time=slice("2000-01-01", "2020-12-31"), level=500, drop=True)
+    # Subset to year 2000, 500hPa pressure level
+    ds_500hpa = ds.sel(time=slice("2000-01-01", "2000-12-31"), level=500, drop=True)
 
     # Get data variable z500, u500, v500
     ds_500hpa_zuv = ds_500hpa.get(
@@ -38,11 +38,12 @@ if not os.path.exists(path=store_name):
 
     # Save to Zarr with chunks of size 1 along time dimension
     # Can take about 1 hour to save 10.7GB of data at 40MB/s
-    ds_500hpa_zuv.chunk(time=1).to_zarr(
-        store="2020-2022-6h-240x121_equiangular_with_poles_conservative_zuv500.zarr",
-        consolidated=True,
-        zarr_version=2,
+    ds_rechunked: xr.Dataset = ds_500hpa_zuv.chunk(
+        time=1,
+        latitude=len(ds_500hpa_zuv.latitude),
+        longitude=len(ds_500hpa_zuv.longitude),
     )
+    ds_rechunked.to_zarr(store=store_name, consolidated=True, zarr_version=2)
 
 # Read back Zarr store using kvikIO engine to
 # ensure things were saved correctly and can be loaded into GPU directly
@@ -51,4 +52,4 @@ ds_zarr: xr.Dataset = xr.open_dataset(
 )
 print(ds_zarr)
 print(ds_zarr.u_component_of_wind)
-print(f"Loaded as {ds_zarr.u_component_of_wind.data.__class__}")
+print(f"Loaded as {ds_zarr.u_component_of_wind.isel(time=0).data.__class__}")
