@@ -11,5 +11,9 @@ cufile.log
 checkpoints/*.ckpt
 logs/
 
+# Figures
+**/*.png
+**/*.svg
+
 # Jupyter Notebooks
 .ipynb_checkpoints/
