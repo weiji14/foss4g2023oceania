@@ -129,6 +129,8 @@ Ampere generation (e.g. RTX A2000) NVIDIA GPU.
 ## Links
 
 - https://xarray.dev/blog/xarray-kvikio
+- https://developer.nvidia.com/blog/gpudirect-storage
+- https://developmentseed.org/blog/2023-09-20-see-you-at-foss4g-sotm-oceania-2023
 
 ## License
 
