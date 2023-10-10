@@ -12,9 +12,9 @@ Sources of logos (as of Oct 2023):
 - datashader - https://github.com/holoviz/datashader/blob/v0.15.2/doc/_static/logo_horizontal.svg
 - FlatGeobuf - https://github.com/flatgeobuf/flatgeobuf/blob/3.26.2/logo.svg
 - GDAL - https://github.com/OSGeo/gdal/blob/v3.7.2/doc/images/GDALLogoColor.svg
-- geopandas - https://github.com/geopandas/geopandas/blob/v0.14.0/doc/source/_static/logo/geopandas_logo.svg
+- GeoPandas - https://github.com/geopandas/geopandas/blob/v0.14.0/doc/source/_static/logo/geopandas_logo.svg
 - GeoSMART - https://github.com/geo-smart/geo-smart.github.io/blob/47f4925fceb775226457ffd8eb77c02f0b83b484/assets/GeoSMART_logo.svg
-- Jax - https://github.com/google/jax/blob/jaxlib-v0.4.18/images/jax_logo.svg
+- JaX - https://github.com/google/jax/blob/jaxlib-v0.4.18/images/jax_logo.svg
 - NumPy - https://github.com/numpy/numpy/blob/v1.26.0/branding/logo/primary/numpylogo.svg
 - Pandas - https://pandas.pydata.org/about/citing.html
 - Pangeo - https://github.com/pangeo-data/branding/blob/199e301516adebabdfe120c347124f24288ca639/logo/large-logo-blue-text.png
@@ -28,7 +28,7 @@ Sources of logos (as of Oct 2023):
 - xbatcher - https://github.com/xarray-contrib/xbatcher/blob/v0.3.0/doc/_static/logo.svg
 - Zarr - https://github.com/zarr-developers/zarr-logo/blob/2022-04-28/zarr-pink-horizontal.svg
 
-Without logo
+Without logos:
 
 - cuDF
 - cupy-xarray

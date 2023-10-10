@@ -1,5 +1,7 @@
 # [FOSS4G SotM Oceania 2023 presentation](https://talks.osgeo.org/foss4g-sotm-oceania-2023/talk/YP3KPT)
 
+![Pangeo Machine Learning Ecosystem 2023](https://github.com/weiji14/foss4g2023oceania/assets/23487320/f91941a8-80c5-48b1-841a-1265bec1eed6)
+
 The ecosystem of geospatial machine learning tools in the
 [Pangeo](https://pangeo.io) world.
 
