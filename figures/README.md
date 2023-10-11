@@ -2,6 +2,11 @@
 
 Folder to store all the figures used in the presentation.
 
+## Excalidraw files
+
+- [Pangeo ML Ecosystem 2023 diagram](foss4g2023oceania_pangeo_ml_talk.excalidraw) | https://excalidraw.com/#json=Z0T6mFgNZnFSjN3rs349O,YdPkNNwey7rS5OtWgvSkyQ
+- [NVIDIA GPU Direct Storage](nvidia_gpu_direct_storage.excalidraw) | https://excalidraw.com/#json=PBEuODqMxdJFVxGrgLzkP,ZAGNmAF2OJmxeq_nIDbPEA
+
 ## Logos
 
 Sources of logos (as of Oct 2023):
