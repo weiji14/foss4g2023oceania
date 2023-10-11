@@ -1,6 +1,6 @@
 # [FOSS4G SotM Oceania 2023 presentation](https://talks.osgeo.org/foss4g-sotm-oceania-2023/talk/YP3KPT)
 
-![Pangeo Machine Learning Ecosystem 2023](https://github.com/weiji14/foss4g2023oceania/assets/23487320/f91941a8-80c5-48b1-841a-1265bec1eed6)
+[![Pangeo Machine Learning Ecosystem 2023](https://github.com/weiji14/foss4g2023oceania/assets/23487320/f91941a8-80c5-48b1-841a-1265bec1eed6)](https://github.com/weiji14/foss4g2023oceania/pull/5)
 
 The ecosystem of geospatial machine learning tools in the
 [Pangeo](https://pangeo.io) world.
@@ -37,6 +37,7 @@ data pipelines. Learn more as the Pangeo community develops tutorials at
 about the challenges and ideas on scaling machine learning in the geosciences
 with the [Pangeo ML Working Group](https://pangeo.io/meeting-notes.html#working-group-meetings).
 
+[![NVIDIA GPUDirect Storage schematic](https://github.com/weiji14/foss4g2023oceania/assets/23487320/b339605a-492b-4c5c-8a06-b14ebcd258b7)](https://github.com/weiji14/foss4g2023oceania/pull/6)
 
 # Getting started
 
