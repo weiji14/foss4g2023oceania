@@ -13,9 +13,9 @@ import lightning as L
 import torch
 import torchdata
 import torchdata.dataloader2
-import tqdm
 import xarray as xr
 import zen3geo
+from tqdm.auto import tqdm, trange
 
 
 # %%
@@ -172,8 +172,8 @@ if __name__ == "__main__":
 
     # Training loop
     num_epochs: int = 10
-    for epoch in tqdm.trange(num_epochs):
-        for i, batch in tqdm.tqdm(iterable=enumerate(train_dataloader), total=23):
+    for epoch in trange(num_epochs):
+        for i, batch in tqdm(iterable=enumerate(train_dataloader), total=23):
             input, target, metadata = batch
             # Compute Mean Squared Error loss between t=0 and t=1, just for fun
             loss: torch.Tensor = torch.functional.F.mse_loss(input=input, target=target)
