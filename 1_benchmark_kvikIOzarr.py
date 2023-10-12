@@ -189,7 +189,7 @@ if __name__ == "__main__":
     total_time: float = np.sum(a=epoch_timings)
     median_time: float = np.median(a=epoch_timings)
     mean_time: float = np.mean(a=epoch_timings)
-    std_time: float = np.std(a=epoch_timings)
+    std_time: float = np.std(a=epoch_timings, ddof=1)
     print(
         f"Total: {total_time:0.4f} seconds, "
         f"Median: {median_time:0.4f} seconds/epoch, "
