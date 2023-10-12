@@ -10,6 +10,7 @@ import time
 
 import cupy
 import lightning as L
+import numpy as np
 import torch
 import torchdata
 import torchdata.dataloader2
@@ -167,22 +168,30 @@ if __name__ == "__main__":
     datamodule.setup()
     train_dataloader = datamodule.train_dataloader()
 
-    # Start timing
-    tic: float = time.perf_counter()
-
     # Training loop
     num_epochs: int = 10
+    epoch_timings: list = []
     for epoch in trange(num_epochs):
+        # Start timing
+        tic: float = time.perf_counter()
+
+        # Mini-batch processing
         for i, batch in tqdm(iterable=enumerate(train_dataloader), total=23):
             input, target, metadata = batch
             # Compute Mean Squared Error loss between t=0 and t=1, just for fun
             loss: torch.Tensor = torch.functional.F.mse_loss(input=input, target=target)
             # print(f"Batch {i}, MSE Loss: {loss}")
 
-    # Stop timing
-    toc: float = time.perf_counter()
-    total_time: float = toc - tic
+        # Stop timing
+        toc: float = time.perf_counter()
+        epoch_timings.append(toc - tic)
+
+    total_time: float = np.sum(a=epoch_timings)
+    median_time: float = np.median(a=epoch_timings)
+    mean_time: float = np.mean(a=epoch_timings)
+    std_time: float = np.std(a=epoch_timings)
     print(
         f"Total: {total_time:0.4f} seconds, "
-        f"Average: {total_time/num_epochs:0.4f} seconds/epoch"
+        f"Median: {median_time:0.4f} seconds/epoch, "
+        f"Mean: {mean_time:0.4f} ± {std_time:0.4f} seconds/epoch"
     )
