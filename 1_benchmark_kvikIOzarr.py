@@ -168,15 +168,21 @@ if __name__ == "__main__":
     train_dataloader = datamodule.train_dataloader()
 
     # Start timing
-    tic = time.perf_counter()
+    tic: float = time.perf_counter()
 
     # Training loop
-    for i, batch in tqdm.tqdm(iterable=enumerate(train_dataloader), total=23):
-        input, target, metadata = batch
-        # Compute Mean Squared Error loss between t=0 and t=1, just for fun
-        loss: torch.Tensor = torch.functional.F.mse_loss(input=input, target=target)
-        print(f"Batch {i}, MSE Loss: {loss}")
+    num_epochs: int = 10
+    for epoch in tqdm.trange(num_epochs):
+        for i, batch in tqdm.tqdm(iterable=enumerate(train_dataloader), total=23):
+            input, target, metadata = batch
+            # Compute Mean Squared Error loss between t=0 and t=1, just for fun
+            loss: torch.Tensor = torch.functional.F.mse_loss(input=input, target=target)
+            # print(f"Batch {i}, MSE Loss: {loss}")
 
     # Stop timing
-    toc = time.perf_counter()
-    print(f"Total: {toc - tic:0.4f} seconds")
+    toc: float = time.perf_counter()
+    total_time: float = toc - tic
+    print(
+        f"Total: {total_time:0.4f} seconds, "
+        f"Average: {total_time/num_epochs:0.4f} seconds/epoch"
+    )
