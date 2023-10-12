@@ -15,6 +15,7 @@ dependencies:
   - pip~=23.2.1
   - pynvml~=11.5.0
   - python~=3.10
+  - seaborn~=0.13.0
   - torchdata~=0.6.1
   - xarray~=2023.9.0
   - xbatcher~=0.3.0
