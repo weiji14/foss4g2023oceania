@@ -136,8 +136,8 @@ the following:
 
 The time to load the ERA5 subset data using the `kvikio` and `zarr` engines
 will be printed out. There will also be a summary report of the relative
-speedup between the CPU-based `zarr` and GPU-based `kvikio` engine, and bar
-plots of the absolute time taken for each backend engine.
+time difference between the CPU-based `zarr` and GPU-based `kvikio` engine, and
+bar plots of the absolute time taken for each backend engine.
 
 
 # References
