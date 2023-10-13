@@ -112,18 +112,33 @@ To create a subset of the WeatherBench2 Zarr dataset, run:
 
     python 0_weatherbench2zarr.py
 
-This will save a one year subset of the WeatherBench2 ERA5 dataset to your
-local disk. It will include data at pressure level 500hPa, with the variables
-'geopotential', 'u_component_of_wind', and 'v_component_of_wind' only.
+This will save a one year subset of the WeatherBench2 ERA5 dataset at 6 hourly
+resolution to your local disk (total size is about 18.2GB). It will include
+data at pressure level 500hPa, with the variables 'geopotential',
+'u_component_of_wind', and 'v_component_of_wind' only.
 
 To run the benchmark experiment loading with the kvikIO engine, run:
 
     python 1_benchmark_kvikIOzarr.py
 
 This will print out a progress bar showing the ERA5 data being loaded in
-mini-batches (simulating a neural network training loop), and a total count
-for the time taken to finish. One 'epoch' should take under 15 seconds on an
-Ampere generation (e.g. RTX A2000) NVIDIA GPU.
+mini-batches (simulating a neural network training loop). One 'epoch' should
+take under 15 seconds on an Ampere generation (e.g. RTX A2000) NVIDIA GPU. A
+total of ten epochs will be ran, and the total time taken will be reported, as
+well as the median/mean/standard deviation time taken per epoch.
+
+To compare the benchmark results between the `kvikio` and `zarr` engines, do
+the following:
+
+1. Run `jupyter lab` to launch a JupyterLab session
+2. In your browser, open the `2_compare_results.ipynb` notebook in JupyterLab
+3. Run all the cells in the notebook
+
+The time to load the ERA5 subset data using the `kvikio` and `zarr` engines
+will be printed out. There will also be a summary report of the relative
+time difference between the CPU-based `zarr` and GPU-based `kvikio` engine, and
+bar plots of the absolute time taken for each backend engine.
+
 
 # References
 
