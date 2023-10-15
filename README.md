@@ -39,6 +39,11 @@ with the [Pangeo ML Working Group](https://pangeo.io/meeting-notes.html#working-
 
 [![NVIDIA GPUDirect Storage schematic](https://github.com/weiji14/foss4g2023oceania/assets/23487320/b339605a-492b-4c5c-8a06-b14ebcd258b7)](https://github.com/weiji14/foss4g2023oceania/pull/6)
 [![xbatcher n-dimensional slicing](https://github.com/weiji14/foss4g2023oceania/assets/23487320/38af26ca-83ea-4798-be7f-95608ad56df0)](https://github.com/weiji14/foss4g2023oceania/pull/8)
+[![zen3geo Composable DataPipes](https://github.com/weiji14/foss4g2023oceania/assets/23487320/d6530fbd-3f83-4b50-a73b-5a1b696158bf)](https://github.com/weiji14/foss4g2023oceania/pull/9)
+
+> [!NOTE]
+> See full presentation slides at https://hackmd.io/@weiji14/foss4g2023oceania
+
 
 # Getting started
 
