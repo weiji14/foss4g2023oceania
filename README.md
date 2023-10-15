@@ -38,6 +38,7 @@ about the challenges and ideas on scaling machine learning in the geosciences
 with the [Pangeo ML Working Group](https://pangeo.io/meeting-notes.html#working-group-meetings).
 
 [![NVIDIA GPUDirect Storage schematic](https://github.com/weiji14/foss4g2023oceania/assets/23487320/b339605a-492b-4c5c-8a06-b14ebcd258b7)](https://github.com/weiji14/foss4g2023oceania/pull/6)
+[![xbatcher n-dimensional slicing](https://github.com/weiji14/foss4g2023oceania/assets/23487320/38af26ca-83ea-4798-be7f-95608ad56df0)](https://github.com/weiji14/foss4g2023oceania/pull/8)
 
 # Getting started
 
