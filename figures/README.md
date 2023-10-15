@@ -8,6 +8,7 @@ Folder to store all the figures used in the presentation.
 - [NVIDIA GPU Direct Storage](nvidia_gpu_direct_storage.excalidraw) | https://excalidraw.com/#json=PBEuODqMxdJFVxGrgLzkP,ZAGNmAF2OJmxeq_nIDbPEA
 - [xbatcher n-dimensional slicing](xbatcher_ndim_slicing.excalidraw) | https://excalidraw.com/#json=4iuB5hMt9ihbLNrN8Pirw,Ktfz9P8oHqQS5IJrBzoC8A
 - [zen3geo Composable DataPipes](zen3geo_composable_datapipes.excalidraw) | https://excalidraw.com/#json=jXYi3HmfQ6EL_Jne69GlN,yThyiWMIlpMtnUZwUCXR5g
+- [Demo DataPipe code](demo_datapipe_code.excalidraw) | https://excalidraw.com/#json=qmaqRpcbNKIcKgl4u446i,Tzn4YloE5eZmPaEZYB4uAQ
 
 ## Logos
 
