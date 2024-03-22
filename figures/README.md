@@ -48,3 +48,10 @@ Without logos:
 - rioxarray
 - stackstac
 - zen3geo
+
+Specific branding guidelines:
+
+- Pangeo - https://github.com/pangeo-data/branding
+- PyTorch - https://pytorch.org/assets/brand-guidelines/PyTorch-Brand-Guidelines.pdf
+- RAPIDS AI - https://rapids.ai/branding
+- TensorFlow - https://www.tensorflow.org/extras/tensorflow_brand_guidelines.pdf

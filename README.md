@@ -13,6 +13,15 @@ The ecosystem of geospatial machine learning tools in the
 
 **Website**: https://2019.foss4g-oceania.org/schedule/2019-11-12?sessionId=SPGUQV
 
+[![Video of PangeoML Ecosystem 2023 talk](https://github.com/weiji14/foss4g2023oceania/assets/23487320/a261842d-d008-48c4-83bb-e3fc977d7f90)](https://www.youtube.com/watch?v=X2LBuUfSo5Q)
+
+**Presentation slides**: https://hackmd.io/@weiji14/foss4g2023oceania
+
+**Blog post (part 1)**: https://weiji14.github.io/blog/the-pangeo-machine-learning-ecosystem-in-2023
+
+**Blog post (part 2)**: https://weiji14.github.io/blog/when-cloud-native-geospatial-meets-gpu-native-machine-learning
+
+
 ## Abstract
 
 Several open source tools are enabling the shift to cloud-native geospatial
@@ -41,9 +50,6 @@ with the [Pangeo ML Working Group](https://pangeo.io/meeting-notes.html#working-
 [![xbatcher n-dimensional slicing](https://github.com/weiji14/foss4g2023oceania/assets/23487320/38af26ca-83ea-4798-be7f-95608ad56df0)](https://github.com/weiji14/foss4g2023oceania/pull/8)
 [![zen3geo Composable DataPipes](https://github.com/weiji14/foss4g2023oceania/assets/23487320/d6530fbd-3f83-4b50-a73b-5a1b696158bf)](https://github.com/weiji14/foss4g2023oceania/pull/9)
 
-> [!NOTE]
-> See full presentation slides at https://hackmd.io/@weiji14/foss4g2023oceania
-
 
 # Getting started
 
@@ -54,6 +60,13 @@ with the [Pangeo ML Working Group](https://pangeo.io/meeting-notes.html#working-
 Follow instructions at
 https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#install-gpudirect-storage
 to install NVIDIA GPU Direct Storage (GDS).
+
+> [!NOTE]
+> Starting with CUDA toolkit 12.2.2, GDS kernel driver package nvidia-gds version
+> 12.2.2-1 (provided by nvidia-fs-dkms 2.17.5-1) and above is only supported with the
+> NVIDIA open kernel driver. Follow instructions in
+> [NVIDIA Open GPU Kernel Modules](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#nvidia-open-gpu-kernel-modules)
+> to install NVIDIA open kernel driver packages.
 
 Verify that NVIDIA GDS has been installed properly following
 https://docs.nvidia.com/gpudirect-storage/troubleshooting-guide/index.html#verify-suc-install.
@@ -152,7 +165,10 @@ bar plots of the absolute time taken for each backend engine.
 
 - https://xarray.dev/blog/xarray-kvikio
 - https://developer.nvidia.com/blog/gpudirect-storage
+- https://developer.nvidia.com/blog/machine-learning-frameworks-interoperability-part-2-data-loading-and-data-transfer-bottlenecks/
 - https://developmentseed.org/blog/2023-09-20-see-you-at-foss4g-sotm-oceania-2023
+- https://medium.com/rapids-ai/pytorch-rapids-rmm-maximize-the-memory-efficiency-of-your-workflows-f475107ba4d4
+- https://developer.nvidia.com/blog/introduction-cuda-aware-mpi/
 
 ## License
 
