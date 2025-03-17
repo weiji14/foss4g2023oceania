@@ -11,15 +11,15 @@ The ecosystem of geospatial machine learning tools in the
 
 **Where**: [Te Iringa (Wave Room - WG308), Auckland University of Technology (AUT)](https://2023.foss4g-oceania.org/#/attend/our-conference-venue), Auckland, New Zealand
 
-**Website**: https://2019.foss4g-oceania.org/schedule/2019-11-12?sessionId=SPGUQV
+**Website**: https://talks.osgeo.org/foss4g-sotm-oceania-2023/talk/YP3KPT/
 
 [![Video of PangeoML Ecosystem 2023 talk](https://github.com/weiji14/foss4g2023oceania/assets/23487320/a261842d-d008-48c4-83bb-e3fc977d7f90)](https://www.youtube.com/watch?v=X2LBuUfSo5Q)
 
 **Presentation slides**: https://hackmd.io/@weiji14/foss4g2023oceania
 
-**Blog post (part 1)**: https://weiji14.github.io/blog/the-pangeo-machine-learning-ecosystem-in-2023
+**Blog post (part 1)**: https://weiji14.xyz/blog/the-pangeo-machine-learning-ecosystem-in-2023
 
-**Blog post (part 2)**: https://weiji14.github.io/blog/when-cloud-native-geospatial-meets-gpu-native-machine-learning
+**Blog post (part 2)**: https://weiji14.xyz/blog/when-cloud-native-geospatial-meets-gpu-native-machine-learning
 
 
 ## Abstract
@@ -44,7 +44,7 @@ rasterizing vector geometries to stacking multi-resolution datasets for custom
 data pipelines. Learn more as the Pangeo community develops tutorials at
 [Project Pythia](https://cookbooks.projectpythia.org), and join in to hear
 about the challenges and ideas on scaling machine learning in the geosciences
-with the [Pangeo ML Working Group](https://pangeo.io/meeting-notes.html#working-group-meetings).
+with the [Pangeo ML Working Group](https://www.pangeo.io/meetings).
 
 [![NVIDIA GPUDirect Storage schematic](https://github.com/weiji14/foss4g2023oceania/assets/23487320/b339605a-492b-4c5c-8a06-b14ebcd258b7)](https://github.com/weiji14/foss4g2023oceania/pull/6)
 [![xbatcher n-dimensional slicing](https://github.com/weiji14/foss4g2023oceania/assets/23487320/38af26ca-83ea-4798-be7f-95608ad56df0)](https://github.com/weiji14/foss4g2023oceania/pull/8)
@@ -87,7 +87,7 @@ To help out with development, start by cloning this [repo-url](/../../)
 
     git clone <repo-url>
 
-Then I recommend [using mamba](https://mamba.readthedocs.io/en/latest/installation.html)
+Then I recommend [using mamba](https://mamba.readthedocs.io/en/latest/installation/mamba-installation.html)
 to install the dependencies.
 A virtual environment will also be created with Python and
 [JupyterLab](https://github.com/jupyterlab/jupyterlab) installed.
